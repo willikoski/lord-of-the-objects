@@ -210,8 +210,10 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
+  
+  // document.getElementById("buddies-list").children[3].innerText = "Aragorn";
+  document.querySelector("#rivendell ul").children[3].innerHTML = "Aragorn";
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
