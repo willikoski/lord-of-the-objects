@@ -165,6 +165,7 @@ function makeBuddies() {
 
   // put an `unordered list` of the `'buddies'` in the aside
   const buddiesList = document.createElement("ul");
+  // buddiesList.setAttribute("id", "buddies-list");
   asideEl.appendChild(buddiesList);
 
   for (let buddy of buddies) {
@@ -214,6 +215,7 @@ function beautifulStranger() {
   // document.getElementById("buddies-list").children[3].innerText = "Aragorn";
   document.querySelector("#rivendell ul").children[3].innerHTML = "Aragorn";
 }
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -225,7 +227,35 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
   console.log("8: forgeTheFellowShip");
   // create a new div called `'the-fellowship'` within `rivendell`
+  const fellowshipContainer = document.createElement("div");
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+  const fellowshipLabel = document.createElement("h2");
+  fellowshipLabel.innerText = "The Fellowship";
+  fellowshipContainer.appendChild(fellowshipLabel);
+  const fellowshipUL = document.createElement("ul");
+  fellowshipContainer.appendChild(fellowshipUL);
+  document.getElementById("rivendell").appendChild(fellowshipContainer);
+  for (let hobbit of hobbits) {
+    const hobbitLI = document.createElement("li");
+    hobbitLI.innerText = hobbit;
+    
+    alert(`${hobbit} has joined the fellowship.`)
+    fellowshipUL.appendChild(hobbitLI);
+    
+  }
+
+  for (let buddy of buddies) {
+    const buddyLI = document.createElement("li");
+    buddyLI.innerText = buddy;
+
+    alert(`${buddy} has joined the fellowship.`)
+    fellowshipUL.appendChild(buddyLI);
+  }
+
+  
+
+
+
   // after each character is added make an alert that they // have joined your party
 
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
