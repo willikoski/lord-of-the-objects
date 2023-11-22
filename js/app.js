@@ -190,6 +190,12 @@ function leaveTheShire() {
   console.log("6: leaveTheShire");
 
   // assemble the `hobbits` and move them to `rivendell`
+  hobbitsContainer = document.querySelector("#the-shire ul");
+  // grab the hobbits list
+  // remove it from its current parent
+  document.getElementById("rivendell").appendChild(hobbitsContainer);
+  // add it to rivendell
+
 }
 
 // COMMIT YOUR WORK
